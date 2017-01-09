@@ -35,6 +35,7 @@
 -r:"C:\Users\markhart\.nuget\packages\Microsoft.AspNetCore.Mvc.Cors\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Cors.dll"
 -r:"C:\Users\markhart\.nuget\packages\Microsoft.AspNetCore.Mvc.DataAnnotations\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.DataAnnotations.dll"
 -r:"C:\Users\markhart\.nuget\packages\Microsoft.AspNetCore.Mvc.Formatters.Json\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Formatters.Json.dll"
+-r:"C:\Users\markhart\.nuget\packages\Microsoft.AspNetCore.Mvc.Formatters.Xml\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll"
 -r:"C:\Users\markhart\.nuget\packages\Microsoft.AspNetCore.Mvc.Localization\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Localization.dll"
 -r:"C:\Users\markhart\.nuget\packages\Microsoft.AspNetCore.Mvc.Razor\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Razor.dll"
 -r:"C:\Users\markhart\.nuget\packages\Microsoft.AspNetCore.Mvc.Razor.Host\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Razor.Host.dll"
@@ -139,6 +140,7 @@
 -r:"C:\Users\markhart\.nuget\packages\System.Runtime.Loader\4.0.0\ref\netstandard1.5\System.Runtime.Loader.dll"
 -r:"C:\Users\markhart\.nuget\packages\System.Runtime.Numerics\4.0.1\ref\netstandard1.1\System.Runtime.Numerics.dll"
 -r:"C:\Users\markhart\.nuget\packages\System.Runtime.Serialization.Primitives\4.1.1\ref\netstandard1.3\System.Runtime.Serialization.Primitives.dll"
+-r:"C:\Users\markhart\.nuget\packages\System.Runtime.Serialization.Xml\4.1.1\ref\netstandard1.3\System.Runtime.Serialization.Xml.dll"
 -r:"C:\Users\markhart\.nuget\packages\System.Security.Claims\4.0.1\ref\netstandard1.3\System.Security.Claims.dll"
 -r:"C:\Users\markhart\.nuget\packages\System.Security.Cryptography.Algorithms\4.2.0\ref\netstandard1.6\System.Security.Cryptography.Algorithms.dll"
 -r:"C:\Users\markhart\.nuget\packages\System.Security.Cryptography.Encoding\4.0.0\ref\netstandard1.3\System.Security.Cryptography.Encoding.dll"
@@ -160,6 +162,7 @@
 -r:"C:\Users\markhart\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\markhart\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\markhart\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
+-r:"C:\Users\markhart\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll"
 -resource:"C:\Git\CityAPI\CityInfo.API\obj\Debug\netcoreapp1.0\CityInfo.APIdotnet-compile.deps.json",CityInfo.API.deps.json
 "C:\Git\CityAPI\CityInfo.API\CitiesDataStore.cs"
 "C:\Git\CityAPI\CityInfo.API\Program.cs"
