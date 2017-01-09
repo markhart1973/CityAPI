@@ -175,3 +175,5 @@ C:\Git\CityAPI\CityInfo.API\Controllers\CitiesController.cs
 C:\Git\CityAPI\CityInfo.API\Controllers\PointsOfInterestController.cs
 C:\Git\CityAPI\CityInfo.API\Models\CityDto.cs
 C:\Git\CityAPI\CityInfo.API\Models\PointOfInterestDto.cs
+C:\Git\CityAPI\CityInfo.API\Models\PointOfInterestForCreationDto.cs
+C:\Git\CityAPI\CityInfo.API\Models\PointOfInterestForUpdateDto.cs
