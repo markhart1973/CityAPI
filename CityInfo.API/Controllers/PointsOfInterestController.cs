@@ -1,6 +1,8 @@
 ﻿using CityInfo.API.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Linq;
 
 namespace CityInfo.API.Controllers
@@ -12,16 +14,33 @@ namespace CityInfo.API.Controllers
         private const string GetActionAllPoi = "GetPointsOfInterest";
         private const string GetActionPoi = "GetPointOfInterest";
 
+        private ILogger<PointsOfInterestController> _logger;
+
+        public PointsOfInterestController(ILogger<PointsOfInterestController> logger)
+        {
+            _logger = logger;
+        }
+
         [HttpGet("{cityId}/pointsofinterest", Name = GetActionAllPoi)]
         public IActionResult GetPointsOfInterest(int cityId)
         {
-            var city = CitiesDataStore.Current.Cities
-                .FirstOrDefault(c => c.Id == cityId);
-            if (city == null)
+            try
             {
-                return NotFound();
+                var city = CitiesDataStore.Current.Cities
+                .FirstOrDefault(c => c.Id == cityId);
+                if (city == null)
+                {
+                    _logger.LogInformation($"City with Id {cityId} wasn't found when accessing points of interest.");
+                    return NotFound();
+                }
+                return Ok(city.PointsOfInterest);
             }
-            return Ok(city.PointsOfInterest);
+            catch (Exception ex)
+            {
+                _logger.LogCritical($"Exception whilst getting points of interest for city with Id {cityId}.", ex);
+                return StatusCode(500, "A problem happened while handling your request.");
+            }
+            
         }
 
         [HttpGet("{cityId}/pointsofinterest/{id}", Name = GetActionPoi)]
@@ -175,6 +194,29 @@ namespace CityInfo.API.Controllers
 
             currentPoi.Name = patchPoi.Name;
             currentPoi.Description = patchPoi.Description;
+
+            return NoContent();
+        }
+
+        [HttpDelete("{cityId}/pointsofinterest/{id}")]
+        public IActionResult DeletePointOfInterest(int cityId,
+            int id)
+        {
+            var currentCity = CitiesDataStore.Current.Cities
+                .FirstOrDefault(c => c.Id == cityId);
+            if (currentCity == null)
+            {
+                return NotFound();
+            }
+
+            var currentPoi = currentCity.PointsOfInterest
+                .FirstOrDefault(c => c.Id == id);
+            if (currentPoi == null)
+            {
+                return NotFound();
+            }
+
+            currentCity.PointsOfInterest.Remove(currentPoi);
 
             return NoContent();
         }
